@@ -19,8 +19,30 @@ This project implements an AI-powered research assistant that can use external t
 - Python 3.8 or later
 - API keys for Tavily
 
-### Python Libraries
-You can install the required libraries by running:
+## How It Works
+- **System Prompt**: Defines the assistant's behavior and capabilities. The assistant is instructed to use external tools to look up information.
+- **Internet Search**: Utilizes the Tavily API to perform web searches and retrieve up-to-date information on the given query.
+- **Function Calls**: When the assistant requires an external tool (like internet search), it invokes the appropriate function to gather information and continue the conversation.
+
+## Example 
 
 ```bash
-pip install -r requirements.txt
+- $ python main.py
+Welcome to the AI Chat! Type 'exit' to end the conversation.
+You: Tell me the latest news about AI research.
+Calling tool: search_internet
+Arguments: {'query': 'latest AI research news'}
+AI: The latest AI research indicates advances in generative models...
+You: exit
+AI: Goodbye!
+
+```
+
+## Future Enhancements
+
+- **Additional Tools**: Integrate more tools for enhanced functionality, such as file retrieval, task management, or computational tools.
+- **Advanced Conversation Logic**: Improve the assistant's ability to handle more complex queries that require multi-step reasoning.
+
+## Contributing
+
+- Contributions are welcome! Please feel free to submit a Pull Request or report issues via GitHub Issues.
